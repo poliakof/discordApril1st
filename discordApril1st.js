@@ -13,7 +13,7 @@ n = 5
 for (let i = 1; i <= 5; i++) {
     var line = ""
 
-for (let j = 1; j <= i; j++) {
+for (let j = 1; j <= i; j++){
     line += i * j + " "
 }
 
@@ -43,3 +43,19 @@ Write a JavaScript program that generates a simple math quiz question using rand
 /* Problem 5
 Problem: Given an array of numbers, write a JavaScript program that first filters out all numbers less than 10, then sorts the remaining numbers in ascending order. Use a for loop for filtering and any method of your choice for sorting. Input example: [5, 11, 2, 16, 4, 18, 1, 20]. */
 
+function filtering() {
+
+    let numArray = [5, 11, 2, 16, 4, 18, 1, 20]
+  
+    for (var i = 0; i < numArray.length; i++) {
+      if (numArray[i] < 20) {
+        numArray.splice(numArray.indexOf(numArray[i]), 1);
+      } else {
+        break;
+      }
+    }
+  
+    return numArray;
+  }
+  
+  console.log(filtering().sort((a, b) => !a - !b || a - b))
